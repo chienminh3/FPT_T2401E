@@ -1,0 +1,129 @@
+body {
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);/* tạo shadow viền dưới cho thanh nav */
+}
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.item,.home { 
+    display: flex; /* su dung flex */
+    justify-content: center; /* can giua text theo chieu ngang*/
+    align-items: center; /* can giua text theo chieu doc */
+    width: 7%;
+    height: 100%;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    transition: width 0.2s, height 0.2s;
+}
+
+.icon-home {
+    transition: font-size 0.1s;
+}
+
+.icon-home:hover {
+    font-size: 30px;
+    color: aquamarine;
+}
+
+.item:hover {
+    width: 8%;
+    background-color: aquamarine;
+}
+
+.container {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.left {
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.info-page{
+    margin: 0%;
+}
+
+.name-page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.new-content {
+    width: 100%;
+    height: auto;
+    position: sticky; /* sticky mắc lại và không bị trôi đi tùy thuộc vào value top */
+    top: 60px;
+}
+
+.new-content .more-content{
+    color: #000;
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid #000;
+}
+
+.new-content:hover .more-content{
+    color: royalblue;
+}
+
+.content {
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+    display: flex;
+}
+
+.pic-new {
+    width: 35%;
+    height: 100%;
+}
+
+.content p {
+    width: auto;
+    color: #000;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+
+.text-new:hover {
+    color: royalblue;
+}

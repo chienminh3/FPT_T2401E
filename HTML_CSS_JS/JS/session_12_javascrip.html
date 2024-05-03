@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test javascrip</title>
+    <script>
+        // document.write("hello world");
+        // console.log("hello world")
+        //khai bao bien
+        //1. var
+        var a;
+        a = 10;
+        console.log(a)
+        if (10 == a) {
+            var a = 20;// đối với khai báo kiểu var thì có thể khai báo rất nhiều a như ở vd trên 
+        }
+        console.log(a)
+        var a = 30;
+        console.log(a)
+        
+        //2. let
+        let b = 10;
+        let c = "10";//gia tri cua c la kieu string
+        let d = b + c;
+        console.log(d)
+        if (10 == b) {
+            let d = b + parseInt(c);
+            console.log("gia tri cua b + c = " + d)
+        }
+        //kiem tra kieu gia tri cua mot bien su dung typpeof
+        console.log(typeof(b))
+        console.log(typeof(c))
+
+        //3. const
+        const PI = 3.14;//const là một kiêu khai báo cho một biến có giá trị không thể thay đổi
+        console.log(PI)
+
+        let numberOne = 1;
+        let resulf = numberOne;
+        console.log(resulf)
+
+        var a = 5;
+        var t = ++a * --a;
+        console.log(t)
+
+        //toan tu 3 ngoi
+        let age = 20;
+        let r = (age = 20) ? (age > 20 ? "chuan roi !" : "gia qua !") : "qua tre !";
+        console.log(r)
+
+        //loop
+        numberOne = 10;
+        while (numberOne > 0) {
+            console.log(numberOne)
+            numberOne--;
+        }
+
+        //Array
+        //1.
+        let arr = new Array(2);
+        arr[0] = 2;
+        arr[1] = 4;
+        console.log("gia tri thu 1: " + arr[0] + "gia tri thu 2: " + arr[1])
+        //2.
+        let arr2 = new Array(3, 6, 1);
+        for (var i in arr2) {
+            console.log("phan tu thu "+ i +"co gia tri la: "+ arr2[i])
+            i++;
+        }
+        //3.
+        let arr3 = ["T2401E", "Aptech", 2024];
+        console.log(arr3[0])
+        console.log(typeof(arr3[0]))
+        console.log(typeof(arr3[2]))
+        
+        arr3.forEach((item, index)=> { //forEach copy to item, index display elements
+            console.log("arr3 index: "+ item + " Value: "+ index)
+        })
+
+        let arr4 = arr3.map((item)=> { //tạo ra một mảng mới và add or fix
+            return (item +" FPT Aptech");
+        })
+        console.log(arr4[0])
+
+        arr4.forEach((item, index)=> { //lặp qua các phần tử trong 1 mảng
+            console.log("arr4 index: "+ index +" Value: "+ item)
+        })
+
+        // check item < 18
+        let arr5 = new Array(12, 14, 18, 15, 17, 20);
+        let filter = arr5.filter((item)=> {
+            return item < 18;
+        })
+        filter.forEach((item, index)=> {
+            console.log("filter : "+ index +" item "+ item)
+        })
+
+        //Method: concat, join, pops, push, sort <=======
+        let concatArray = arr.concat(arr2, arr3); //concat gộp nhiều mảng vào nó
+        concatArray.forEach((item, index)=> {
+            console.log("concatArray index: "+ index +" Value: "+ item)
+        })
+
+        let joinArray = arr3.join(" _ "); //Join add variable in elements mid
+        console.log("joinArray: "+ joinArray)
+
+        let popValue = concatArray.pop(); //lấy phần tử cuối cùng trong mảng
+        console.log("popValue: "+ popValue)
+        concatArray.push(concatArray, "Hi");//thêm phần tử vào cuối mảng
+        console.log("concatArray value push: ", concatArray)
+
+        concatArray.forEach((item, index)=> {//lặp qua các phần tử trong mảng
+            console.log("concatArray index: "+ index+" Value: "+item)
+        })
+        
+
+        function validationForm() {
+            let name = document.getElementById("nameID").value;
+            let password = document.getElementById("passwordID").value;
+            if (name == "" || password == "") {
+                let error = document.getElementById("enterError");
+                error.innerText = "Vui lòng nhập đầy đủ thông tin !"
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function removeError() {
+            let name = document.getElementById("nameID").value;
+            let password = document.getElementById("passwordID").value;
+            if (name != "" || password != "") {
+                let error = document.getElementById("enterError")
+                error.innerText = "";
+            }
+        }
+
+
+        //function co tham so
+        function plus(a, b) {
+            console.log(a * b)
+        }
+        plus(45, 4);
+       
+        //object
+        // let obj = new Object();
+        // obj.name = "T2401E";
+        // obj.age = 30;
+        // console.log(obj.name)
+
+        //function template
+        function student_infor(name, age, address) {
+            this.name = name;
+            this.age = age;
+            this.address = address;
+        }
+        let std1 = new student_infor('nguyen van an', '23', 'Ha dong');
+        console.log(std1.name)
+        // alert("name: "+ std1.name +". age: "+ std1.age +". address: "+std1.address);
+
+        //getdate, getmonth, gettime, getday,...
+        let currentime = new Date();
+        currentime = currentime.getMonth();
+        console.log(currentime + 1)
+
+
+        // var val1 = parseInt(prompt("enter the first number for addition"));
+        // var val2 = parseInt(prompt("enter the second number for addition"))
+        // add(val1, val2);
+        // function add(num1, num2) {
+        //     console.log(num1 + num2)
+        // }
+
+    //click to display date
+    function displayDate() {
+        document.getElementById("displayDate").innerHTML = Date();
+    }
+    
+
+    //click to display text css
+    function displayText () {
+        document.getElementById("displayText").style.display = "block";
+    }
+
+
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+        .container_form {
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .container_form form{
+            width: 290px;
+            height: auto;
+        }
+
+        .container_form form li{
+            list-style-type: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .error_button {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .error_button p{
+            margin: 0;
+        }
+
+    </style>
+</head> 
+<body>
+    <!-- login -->
+    <div class="container_form">
+        <form action="">
+            <li>
+                <label for="nameID">Enter your name</label>
+                <input type="text" id="nameID" onkeydown="removeError()">
+            </li>
+            <li>
+                <label for="passwordID">Enter password</label>
+                <input type="text" id="passwordID" oninput="convertToStars(this)" onkeydown="removeError()">
+            </li>
+            
+            <!-- text comment error -->
+            <div class="error_button">
+                <p id="enterError" style="color: red;"></p>
+                <a href=""><button onclick="return validationForm()">Sumbmit</button></a>
+            </div>
+        </form>
+    </div>
+
+    
+    <div style="margin-top: 20px;">
+        CLICK TO DISPLAY DATE 
+        <button id="clickDate" onclick=" displayDate()">CLICK HERE!</button>
+        <p id="displayDate"></p>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <button id="btnText" onclick="displayText()">CLICK HERE !</button>
+        <p id="displayText" style="color: blue; display: none;">Ban vua click vao button !</p>
+    </div>
+
+
+    <button id="btnID">CLICK HERE !</button>
+    <p id="displayID"></p>
+
+
+
+    <!-- JS -->
+    <script>
+
+        document.getElementById("btnID").onclick = displayDate;
+        function displayDate() {
+            document.getElementById("displayID").innerHTML = Date();
+        }
+
+
+        // hien thi mot doan van ban cua tag Name bang cach getElementByTagName
+        document.getElementsByTagName('body')[0].innerHTML = '<div id = "gator"> Alligators rule !! </div>  <div id="gator2"> Alligators rule 2 !! </div> '
+        // edit innerHTML equal method choose element ('gator') and use innerText
+        document.getElementById('gator').innerText = 'Of Course alligators rule !!';
+        document.removeChild('gator2');
+
+
+    </script>
+
+</body>
+</html>

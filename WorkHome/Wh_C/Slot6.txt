@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Paragraphs in One Div</title>
+<style>
+	/* CSS styling */
+.container {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    justify-content: space-between; /* Các phần tử con sẽ được căn chỉnh theo chiều ngang và căn cách với nhau */
+}
+/* sét thuộc tính cho container */
+.container{
+    width: 50%;
+    margin: 0 auto;
+}
+/* sét thuọc tính cho header */
+.header{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header p{
+    padding: 0%;
+    margin: 0%;
+}
+/* sét các phần tử con trong left */
+.left{
+    
+    padding-right: 5px;
+    margin: 0%;
+}
+/* sét thuộc tính cho left */
+.left{
+    width: 50%;
+    height: auto;
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+.content{
+    margin: 0%;
+    padding: 0%;
+}
+.content p{
+    text-indent: 10%;
+}
+p, h1{
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+</style>
+</head>
+<body>
+<!-- Định nghĩa một div có hai phần tử p -->
+<div class="container">
+    <div class="left">
+        <div class="header">
+            <p>Thế giới</p>
+            <p>Thứ ba, 12/3/2024, 14:25 (GMT+7)</p>
+        </div>
+        <div class="content">
+            <h1>Phái đoàn Mỹ rời Arab Saudi vì tranh cãi về 'mũ sợ Chúa'</h1>
+            <p>Phái đoàn về tự do tôn giáo Mỹ cắt ngắn chuyến thăm Arab Saudi vì một thành viên bị yêu cầu bỏ "mũ sợ Chúa" kippah của người Do Thái khi thăm di sản Diriyah.</p>
+            <p>Ủy ban Tự do Tôn giáo Quốc tế Mỹ (USCIF) ngày 11/3 ra tuyên bố rút ngắn chuyến thăm Arab Saudi và rời nước này, sau khi chủ tịch ủy ban là giáo sĩ Abraham Cooper từ chối yêu cầu bỏ mũ kippah trong lúc thăm thị trấn lịch sử, di sản thế giới Diriyah hồi tuần trước.</p>
+            <p>Mũ kippah, hay mũ sợ Chúa, là biểu tượng của sự sùng đạo và tôn kính Chúa Trời của người Do Thái, được làm bằng vải, lưới, đan len.</p>
+        </div>
+    </div>
+    <div class="right">
+        <img src="https://i1-vnexpress.vnecdn.net/2024/03/12/Thiet-ke-chua-co-ten-87-1447-1710219663.png?w=1020&h=0&q=100&dpr=1&fit=crop&s=EI9O5UgQYrMH-GPXe9d05Q">
+    </div>
+</div>
+</body>
+</html>

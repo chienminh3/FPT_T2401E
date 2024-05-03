@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IndexedDB</title>
+</head>
+<body>
+<label>Name</label>
+<input type="text" id="nameId">
+<label>Age</label>
+<input type="text" id="ageId"></br>
+<button onclick="add()">Add Student</button>
+<button onclick="getStudentByKey()">Get Student</button>
+<button onclick="getAllStudent()">Get All Student</button>
+<button onclick="updateData()">Update Student</button>
+<button onclick="deleteData()">Delete Student</button>
+<button onclick="findByIndex()">Find by index Student</button>
+</body>
+</html>
+<script>
+    // check xem trình duyệt có hỗ trợ sử dụng db index hay không?
+    function  checkIndexedDB(){
+        return "indexedDB" in window;
+    }
+    let db;
+    document.addEventListener("DOMContentLoaded", function (){
+        if(!checkIndexedDB()){
+            return;
+        }
+        let requestOpen = indexedDB.open("Info",1);
+        requestOpen.onupgradeneeded = function (e){
+            let dbIndex = e.target.result;
+            let objectStorage = dbIndex.createObjectStore("student", {autoIncrement:true});
+            objectStorage.createIndex("name","name",{unique:false});
+        }
+        requestOpen.onsuccess = function (e){
+            console.log("create db success");
+            db = e.target.result;
+        }
+        requestOpen.onerror = function (e){
+            console.log("create db error");
+        }
+    }, false);
+
+     function newStudent(name, age){
+         this.name = name;
+         this.age = age;
+     }
+
+     //add data
+    function add(){
+        let name = document.getElementById("nameId").value;
+        let age = document.getElementById("ageId").value;
+        let std = new newStudent(name, age);
+        let transaction = db.transaction(["student"],"readwrite");
+        let storage = transaction.objectStore("student");
+        let requestAdd = storage.add(std);
+        requestAdd.onsuccess = function (){
+            console.log("add new student success");
+            document.getElementById("nameId").value = "";
+            document.getElementById("ageId").value = "";
+        }
+        requestAdd.onerror = function (){
+            console.log("add new student error");
+        }
+    }
+
+    //get data by key
+    function getStudentByKey(){
+         let key = 1;
+         let transaction = db.transaction(["student"],"readonly");
+         let storage = transaction.objectStore("student");
+         let requestGet = storage.get(key);
+         requestGet.onsuccess = function (e){
+             let result = e.target.result;
+             for(let i in result){
+                 console.log(i + " = "+result[i]);
+             }
+         }
+         requestGet.onerror = function (){
+             console.log("get data error");
+         }
+    }
+    //get all data
+    function getAllStudent(){
+        let transaction = db.transaction(["student"],"readonly");
+        let storage = transaction.objectStore("student");
+        let requestGet = storage.getAll();
+        requestGet.onsuccess = function (e){
+            let result = e.target.result;
+            for(let i in result){
+                console.log("name: "+result[i].name + ",age: "+result[i].age);
+            }
+        }
+        requestGet.onerror = function (){
+            console.log("get data error");
+        }
+    }
+    //update data
+    function  updateData(){
+         let key = 1;
+        let transaction = db.transaction(["student"],"readwrite");
+        let storage = transaction.objectStore("student");
+        let requestGet = storage.get(key);
+        requestGet.onsuccess = function (e){
+            let student = e.target.result;
+            student.name = "T2401E FPTAptech";
+            student.age = 50;
+            storage.put(student, key);
+            console.log("update data success");
+        }
+        requestGet.onerror = function (){
+            console.log("update data error");
+        }
+
+    }
+    //delete data
+    function deleteData(){
+         let key = 1;
+         let transaction = db.transaction(["student"],"readwrite");
+         let storage = transaction.objectStore("student");
+         // let requestDel = storage.delete(key);
+         let requestDel = storage.clear();
+         requestDel.onsuccess = function (){
+             console.log("delete success");
+         }
+        requestDel.onerror = function (){
+            console.log("delete error");
+        }
+
+    }
+
+    // find by index
+    function findByIndex(){
+         let transaction = db.transaction(["student"],"readonly");
+         let storage = transaction.objectStore("student");
+         let index = storage.index("name");
+         let requestData = index.getAll("T2401E");
+         requestData.onsuccess = function (e){
+             let result = e.target.result;
+             for(let i in result){
+                 console.log("name: "+result[i].name + ",age: "+result[i].age);
+             }
+         }
+    }
+
+
+</script>

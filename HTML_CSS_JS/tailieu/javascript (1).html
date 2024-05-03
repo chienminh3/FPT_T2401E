@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/main.js"> 
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://fap.fptacademy.vn/Attendance/AddAttendance.aspx?subject=7091-BMW&slot=6" method="get">
+        <label for="nameId">Name <span style="color: red;">*</span></label>
+        <input type="text" id="nameId" onkeydown="removeError()"/> </br>
+        <span id="nameError" style="color: red;"></span></br>
+        <button onclick="return validationForm()">Submit</button>
+    </form>
+</body>
+
+</html>

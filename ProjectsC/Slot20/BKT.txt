@@ -1,0 +1,17 @@
+Bài tập 1: Chương trình tìm số dương nhỏ nhất trong một mảng Viết chương trình C để tìm số dương nhỏ nhất trong một mảng. 
+Người dùng sẽ nhập số phần tử của mảng và giá trị của từng phần tử. 
+Chương trình sẽ tìm và hiển thị số dương nhỏ nhất trong mảng.
+ 
+Yêu cầu: 
+- Sử dụng mảng để lưu trữ các phần tử. 
+- Tìm số dương nhỏ nhất trong mảng. 
+- Hiển thị số dương nhỏ nhất trên màn hình
+
+Bài 2: Viết hàm tính tiền điện Viết hàm C tính tiền điện dựa trên số kWh sử dụng. 
+Các mức tiền điện được quy định như sau: 
+- Dưới 50 kWh: 500 đồng/kWh - Từ 51 kWh đến 100 kWh: 700 đồng/kWh 
+- Từ 101 kWh trở lên: 900 đồng/kWh 
+
+Yêu cầu: 	
+- Viết hàm float CrystalTienDien(int soKWh) để tính tiền điện. 
+- Sử dụng chức năng tính tiền điện cho 3 trường hợp: 30 kWh, 80 kWh và 120 kWh

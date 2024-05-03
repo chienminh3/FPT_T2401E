@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Test_2/form.css">
+    <script src="../Test_2/form.js"></script>
+    <title>Form Test</title>
+</head>
+<body>
+    <div class="grid">
+        <h1>Registration</h1>
+        <div class="container">
+            <div class="inputName item">
+                <input class="inputText" type="text" placeholder="First Name" id="firstNameID">
+                <input class="inputText" type="text" placeholder="Last Name" id="lastNameID">
+            </div>
+            <div class="inputBirthday item">
+                <input class="inputText" type="text" placeholder="Birthday" id="birthdayID">
+                <div class="formGender">
+                    <h3>Gender:</h3>
+                    <div class="genderInput">
+                        <div class="itemGender">
+                            <input type="radio" checked>Female
+                        </div>
+                        <div class="itemGender">
+                            <input type="radio">Male
+                        </div>
+                        <div class="itemGender">
+                            <input type="radio">Other
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inputEmailAndNum item">
+                <input class="inputText" type="text" placeholder="Email" id="emailID">
+                <input class="inputText" type="text" placeholder="Phone Number" id="numephoneID">
+            </div>
+            
+                <select name="" id="" class="inputOption item">
+                    <option value="">Subject1</option>
+                    <option value="">Subject2</option>
+                    <option value="">Subject3</option>
+                    <option value="">Subject4</option>
+                </select>
+
+            <a href=""><button onclick="return valid()">Submit</button></a>
+            <p id="errorID" style="color: red;"></p>
+        </div> 
+    </div>
+</body>
+</html>

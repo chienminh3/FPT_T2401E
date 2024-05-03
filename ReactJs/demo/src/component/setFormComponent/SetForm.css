@@ -1,0 +1,77 @@
+.formEvent {
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+    padding: 60px;
+    padding-top: 0;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.inputName {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputRadio {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputCheckBox {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerCheckBox {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    text-align: left;
+}
+
+.display {
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 340px;
+    border: 1px solid #000;
+    font-weight: bold;
+    padding: 70px;
+    box-sizing: border-box;
+}
+
+.containerInfor {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.containerInfor div{
+    display: flex;
+    align-items: center;
+}
+
+.containerInfor p {
+    width: 100px;
+}
+
+.display h4 {
+    margin: 0;
+}
+
+label {
+    margin-left: 20px;
+    font-weight: bold;
+    width: 100px;
+    text-align: left;
+}
+

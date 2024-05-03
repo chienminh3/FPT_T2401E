@@ -1,0 +1,19 @@
+button{
+    background-color: yellow;
+    font-size: larger;
+}
+button:hover {
+    color: blue;
+    background-color: pink;
+}
+
+dt{
+    font-weight: bold;
+}
+dd{
+    margin-left: 20px;
+}
+p {
+    text-align: justify;
+}
+

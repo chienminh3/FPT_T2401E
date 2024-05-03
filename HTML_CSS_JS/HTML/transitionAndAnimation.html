@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 90%;
+        }
+        /* transition */
+        .transition{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transition: width 3s, height 2s;
+        }
+        .transition:hover{
+            background-color: pink;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* animation */
+        .animation{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position:relative;
+            animation: test 10s, 2s;
+        }
+        @keyframes test{
+            0%{background-color: blue; left: 0px; top: 0px ;}
+            25%{background-color: yellow; left: 100%; top: 0px;  border-radius: 50%;}
+            50%{background-color: red; left: 100%; top: 500px;  border-radius: 0%;}
+            75%{background-color:black; left: 0px; top: 500px;  border-radius: 50%;}
+            100%{background-color: blue; left: 0px; top:  0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="transition"></div>
+    <div class="animation"></div>
+</body>
+</html>

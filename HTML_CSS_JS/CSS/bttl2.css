@@ -1,0 +1,55 @@
+/* CSS styling */
+.container {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    justify-content: space-between; /* Các phần tử con sẽ được căn chỉnh theo chiều ngang và căn cách với nhau */
+}
+/* sét thuộc tính cho container */
+.container{
+    width: 50%;
+    margin: 0 auto;
+}
+/* sét thuọc tính cho header */
+.header{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header p{
+    padding: 0%;
+    margin: 0%;
+}
+/* sét các phần tử con trong left */
+.left{
+    
+    padding-right: 5px;
+    margin: 0%;
+}
+/* sét thuộc tính cho left */
+.left{
+    width: 50%;
+    height: auto;
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+.content{
+    margin: 0%;
+    padding: 0%;
+}
+.content p{
+    text-indent: 10%;
+}
+p, h1{
+    text-align: justify;
+    text-transform: uppercase;
+}

@@ -1,0 +1,598 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* set width content in web */
+.content-2,
+.content-3,
+.content-4,
+.content-5,
+.content-6 {
+    border-top: 2px solid rgb(34, 139, 34);
+}
+
+/* CSS CONTENT 2 */
+.content-2 {
+    height: auto;
+    padding-top: 5px;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+.top-content-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-content-2 h1 {
+    margin: 0;
+    color: rgb(34, 139, 34);
+}
+
+/* css top content in wed */
+.seen-more {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover-name-tacgia {
+    transition: color 0.3s ease;
+}
+
+.seen-more i {
+    color: rgb(34, 139, 34);
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.below-content-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.container-item-content-2  {
+    height: auto;
+}
+
+.container-item-content-2 div {
+    width: 100%;
+    height: auto;
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+.container-item-content-2 h3 {
+    transition: color 0.25s ease;
+}
+
+.container-item-content-2 li {
+    list-style-type: none;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-item-content-2 img {
+    width: 100%;
+    height: auto;
+}
+.container-item-content-2 h3 {
+    color: #000;
+    width: 100%;
+    height: auto;
+    font-size: 17px;
+    text-align: center;
+    opacity: 80%;
+    margin-top: 20px;
+}
+
+/* CSS CONTENT 3 */
+.content-3 {
+    height: auto;
+    padding-top: 5px;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+.top-content-3 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-content-3 h1, h3 {
+    margin: 0;
+    color: rgb(34, 139, 34);
+}
+
+
+/* below content 3 */
+.below-content-3 {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pic-content-3-hover {
+    width: 20%;
+}
+
+.below-content-3 a li {
+    list-style-type: none;
+    width: 100%;
+    height: 250px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}   
+
+.below-content-3 a li img {
+    width: 80%;
+    height: 100%;
+}
+
+/* set transition pic */
+.below-content-3 a li img {
+    transition: transform 0.5s ease;
+}
+
+.below-content-3 a .book-name-price {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.hover-name-book {
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    transition: color 0.2s ease;
+}
+
+.below-content-3 .book-name-price .price-book {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.below-content-3 .book-name-price .price-book del {
+    margin-left: 15px;
+    color: #000;
+    opacity: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.below-content-3 .book-name-price .price-book .price {
+    color: rgb(34, 139, 34);
+    font-size: 18px;
+}
+
+.buy-cart {
+    bottom: -45px;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.25s ease-in-out;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.buy-cart .cart {
+    width: 23%;
+    height: 100%;
+    color: rgb(34, 139, 34);
+    background-color: #fff;
+    border: 1px solid rgb(34, 139, 34);
+    box-sizing: border-box;
+    border-radius: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    transition: color 0.3 ease;
+}
+
+.buy-cart .buy {
+    width: 76%;
+    height: 100%;
+    color: #fff;
+    background-color: rgb(34, 139, 34);
+    border: 1px solid rgb(34, 139, 34);
+    box-sizing: border-box;
+    border-radius: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    transition: color 0.3 ease;
+    font-weight: bold;
+}
+
+/* set layout bottom-centent-3 */
+.bottom-content-3 {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.left-content-3 {
+    width: 40%;
+}
+
+.right-content-3 {
+    width: 60%;
+    padding-left: 110px;
+    box-sizing: border-box;
+}
+
+.right-content-3 img {
+    width: 100%;
+    height: auto;
+}
+
+.left-content-3,
+.right-content-3 {
+    margin-top: 30px;
+}
+
+.left-content-3 h1 {
+    margin: 0;
+    color: rgb(34, 139, 34);
+    margin-bottom: 10px;
+}
+
+.left-content-3 i {
+    margin: 0;
+    color: rgb(34, 139, 34);
+    font-weight: bold;
+}
+
+.left-content-3 p {
+    margin: 0;
+    margin-top: 30px;
+    text-align: justify;
+    word-spacing: 2px;
+    line-height: 25px;
+}
+
+
+.left-content-3 .hover-click-XemThem {
+    margin: 0;
+    margin-top: 50px;
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(34, 139, 34);
+    border: 1px solid rgb(34, 139, 34);
+    transition: background-color 0.3s ease;
+}
+
+.hover-click-XemThem h3 {
+    transition: color 0.3s ease;
+}
+
+.hover-click-XemThem h3 {
+    color: #fff;
+}
+
+/* CSS CONTENT 4 */
+.content-4 {
+    margin-top: 30px;
+    height: auto;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.top-content-4 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-content-4 h1 {
+    color: rgb(34, 139, 34);
+    margin: 0;
+}
+
+.bottom-content-4 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.click-content-4-hover {
+    width: 18%;
+    height: auto;
+}
+
+.click-content-4-hover li {
+    list-style-type: none;
+    width: 100%;
+    height: 240px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.click-content-4-hover li img {
+    width: auto;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.infor-book-content-4 {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.infor-book-content-4 .name-book-content-4 {
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.25s ease;
+}
+
+.name-book-content-4 p {
+    margin-top: 0;
+}
+
+.infor-book-content-4 p {
+    display: flex;
+    justify-content: center;
+    color: rgb(34, 139, 34);
+    font-weight: bold;
+}
+
+.price-book-content-4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-book-content-4 p {
+    margin: 0;
+}
+
+.price-book-content-4 small {
+    margin-left: 10px;
+    color: #000;
+}
+
+/* CSS CONTENT 5 */
+.content-5 {
+    margin-top: 30px;
+    height: auto;
+    padding-top: 10px;
+}
+
+.top-content-5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-content-5 h1 {
+    color: rgb(34, 139, 34);
+    margin: 0;
+}
+
+.bottom-content-5 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.bottom-content-5 .container-item-content-5 {
+    width: 32%;
+}
+
+.text-bottom-content-5{
+    margin: 0;
+    color: #000;
+    font-weight: bold;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.bottom-content-5 div a img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bottom-content-5 div p{
+    width: 100%;
+    height: 35px;
+    margin: 0;
+    color: #000;
+    text-align: justify;
+    margin: 0;
+    transition: color 0.25s ease;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.date-bottom-content-5 {
+    opacity: 60%;
+}
+
+/* CSS CONTENT 6 */
+.content-6 {
+    height: auto;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.top-content-6 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.top-content-6 h1 {
+    margin: 0;
+    color: rgb(34, 139, 34);
+}
+
+.bottom-content-6 {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-content-6 {
+    width: 15%;
+    height: auto;
+}
+
+.item-content-6 a { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.item-content-6 a li {
+    width: 140px;
+    height: 140px;
+    list-style-type: none;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.item-content-6 img {
+    width: 100%;
+    height: auto;
+}
+
+.item-content-6 p {
+    width: 100%;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.25s ease;
+}
+
+
+
+
+/* CSS CONTENT 6 */
+
+/* hover */
+/* seen-more top-content-2 */
+.seen-more:hover h3 {
+    color:royalblue;
+}
+
+/* set hover transform for control pointer below-content-2*/
+.pic-content-3-hover:hover li img {
+    transform: scale(1.1);
+}
+
+
+/* set hover buy and cart  */
+.pic-content-3-hover:hover .buy-cart {
+    bottom: 0;
+}
+
+
+/* set hover content book content 4 */
+.click-content-4-hover:hover li img {
+    transform: scale(1.1);
+}
+
+/* set hover cart and buy */
+.cart:hover {
+    color: #fff;
+    background-color: rgb(34, 139, 34);
+}
+.buy:hover {
+    color: rgb(34, 139, 34);
+    background-color: #fff;
+}
+
+/* set hover color book-name-price h3 */
+.hover-name-book:hover {
+    color: rgb(34, 139, 34);
+}
+
+/* set hover color name-book-content-4 */
+.name-book-content-4:hover {
+    color: rgb(34, 139, 34);
+}
+
+/* set hover color h3 in container-item-content-2 */
+.hover-name-tacgia:hover {
+    color: rgb(34, 139, 34);
+}
+
+/* set hover click left-content-3 h3 Xem them */
+.hover-click-XemThem:hover {
+    background-color: white;
+}
+.hover-click-XemThem:hover h3 {
+    color: rgb(34, 139, 34);
+}
+
+/* set hover click color text-bottom-content-5 */
+.text-bottom-content-5:hover {
+    color: rgb(34, 139, 34);
+}
+
+/* set hover text color-text-content-6 */
+.color-text-content-6:hover {
+    color: rgb(34, 139, 34);
+}

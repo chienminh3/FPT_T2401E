@@ -1,0 +1,48 @@
+.admin-container {
+    font-family: sans-serif;
+    width: 500px;
+    height: 250px;
+    border: 1px solid rgb(34, 139, 34);
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(34, 139, 34);
+}
+
+.admin-containerForm {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-containerForm .admin-label {
+    font-weight: bold;
+}
+
+.admin-btn {
+    width: 100px;
+    height: 30px;
+    color: rgb(34, 139, 34);
+    background-color: #fff;
+    border: 1px solid rgb(34, 139, 34);
+    font-weight: bold;
+    border-radius: 2.5px;
+    transition: color 0.25s ease;
+    transition: background-color 0.25s ease;
+}
+
+.admin-btn:hover {
+    color: #fff;
+    background-color: rgb(34, 139, 34);
+}
+

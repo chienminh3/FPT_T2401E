@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+</head>
+<body>
+    <button id="btnID">CLICK HERE !</button>
+    <p id="displayID"></p>
+
+
+
+    <!-- JS -->
+    <script>
+
+        document.getElementById("btnID").onclick = displayDate;
+        function displayDate() {
+            document.getElementById("displayID").innerHTML = Date();
+        }
+
+
+        document.getElementsByTagName('body')[0].innerHTML = '<div id = "gator"> Alligators rule !! </div>'
+        
+        document.getElementById('gator').innerText = 'Of Course alligators rule !!';
+
+
+    </script>
+    
+</body>
+</html>

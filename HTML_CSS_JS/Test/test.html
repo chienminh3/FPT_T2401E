@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Test/test.css">
+    <script src="../Test/test.js">
+
+    </script>
+    <title>Test</title>
+</head>
+<body>
+    <div class="grid">
+        <!-- Header -->
+        <div class="header">
+            <h1>Create Account</h1>
+            <p>Get started with your free account</p>
+        </div>
+        
+        <!-- Nav -->
+        <div class="nav">
+            <div>
+                <a href="" class="item-twitter">
+                    <i class="fa fa-twitter"></i>
+                    <p>Login via Twitter</p>
+                </a>
+                <a href="" class="item-facebook">
+                    <i class="fa fa-facebook"></i>
+                    <p>Login via Facebook</p>
+                </a>
+            </div>
+        </div>
+
+        <hr style="width: 300px;">
+
+        <div class="form">
+            <div>
+                <form action="">
+                    <i class="fa fa-user"></i>
+                    <input placeholder="enter name" id="nameID" type="text" onkeydown="removeError()">
+                </form>
+                <form action="">
+                    <i class="fa fa-envelope"></i>
+                    <input placeholder="enter address" id="addressID" type="text" onkeydown="removeError()">
+                </form>
+                <form action="">
+                    <i class="fa fa-phone"></i>
+                    <select style="border: none; height: 40px; width: 50px;" name="" id="">
+                        <option value="">+84</option>
+                        <input placeholder="enter numberphone" id="numberPhoneID" style="width: 240px;" type="text" onkeydown="removeError(); checkNumIsInteger();">
+                    </select>
+                </form>
+                <form action="">
+                    <i  class="fa fa-building"></i>
+                    <select style="border: none; height: 40px; width: 270px;" name="" id="">
+                        <option value="">helo</option>
+                    </select>
+                </form>
+                <form action="">
+                    <i class="fa fa-unlock-alt"></i>
+                    <input placeholder="enter password" id="passwordID" type="text" oninput="convertToStars(this)" onkeydown="removeError()">
+                </form>
+                <form action="">
+                    <i class="fa fa-unlock-alt"></i>
+                    <input placeholder="acceptpassword" id="acceptpasswordID" type="text" oninput="convertToStars(this)" onkeydown="removeError()">
+                </form>
+            </div>
+        </div>
+        <form  style="margin: top 10px; ;">
+            <a href="https://www.youtube.com/watch?v=zoEtcR5EW08&list=RDzoEtcR5EW08&start_radio=1">
+                <button class="btn" onclick="return validationForm()">Create Account</button>
+            </a>
+        </form>
+        <p id="enterError" style="color: red;"></p>
+        <p>Have an account?<a style="color: rgb(0, 64, 255); text-decoration: none;" href="">Login</a></p>
+    </div>
+</body>
+</html>

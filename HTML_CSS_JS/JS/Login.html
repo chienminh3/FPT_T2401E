@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <style>
+        .container_form {
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .container_form form{
+            width: 290px;
+            height: auto;
+        }
+
+        .container_form form li{
+            list-style-type: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .error_button {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .error_button p{
+            margin: 0;
+        }
+
+    </style>                                                
+
+    <script>
+
+        // valida form
+        function validationForm() {
+            let name = document.getElementById("nameID").value;
+            let password = document.getElementById("passwordID").value;
+            if (name == "" || password == "") {
+                let error = document.getElementById("enterError");
+                error.innerText = "Vui lòng nhập đầy đủ thông tin !"
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        // remove text error
+        function removeError() {
+            let name = document.getElementById("nameID").value;
+            let password = document.getElementById("passwordID").value;
+            if (name != "" || password != "") {
+                let error = document.getElementById("enterError")
+                error.innerText = "";
+            }
+        }
+
+        // convert to stars
+        function convertToStars(inputElement) {
+            var inputValue = inputElement.value;
+            var starredValue = inputValue.replace(/./g, "*");
+            inputElement.value = starredValue;
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+    
+    <!-- login -->
+    <div class="container_form">
+        <form action="">
+            <li>
+                <label for="nameID">Enter your name</label>
+                <input type="text" id="nameID" onkeydown="removeError()">
+            </li>
+            <li>
+                <label for="passwordID">Enter password</label>
+                <input type="text" id="passwordID" oninput="convertToStars(this)" onkeydown="removeError()">
+            </li>
+            
+            <!-- text comment error -->
+            <div class="error_button">
+                <p id="enterError" style="color: red;"></p>
+                <a href=""><button onclick="return validationForm()">Sumbmit</button></a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
