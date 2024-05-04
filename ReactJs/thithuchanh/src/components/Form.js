@@ -11,7 +11,7 @@ function Form() {
     const [year, setYear] = useState(0)
     const [book, setBooks] = useState([])
 
-    useEffect (() => {
+    useEffect(() => {
         db.books.toArray().then(item => setBooks(item))
     }, [])
 
@@ -34,6 +34,20 @@ function Form() {
         clearform();
     }
 
+    const edit = (id) => {
+        db.books.get(id).then(item => {
+            setID(item.id)
+            setName(item.name)
+            setAuther(item.auther)
+            setYear(item.year)
+        })
+        db.books.toArray().then(item => setBooks(item))
+    }
+
+    const del = (id) => {
+        db.books.delete(id)
+        db.books.toArray().then(item => setBooks(item))
+    }
 
     return (
         <>
@@ -42,6 +56,7 @@ function Form() {
                     <label>Tên sách</label>
                     <input type='text'
                         id='bookname'
+                        value={name}
                         onChange={(e) => setName(e.target.value)}>
                     </input>
                 </div>
@@ -49,6 +64,7 @@ function Form() {
                     <label>Tên tác giả</label>
                     <input type='text'
                         id='auther'
+                        value={auther}
                         onChange={(e) => setAuther(e.target.value)}>
                     </input>
                 </div>
@@ -56,6 +72,7 @@ function Form() {
                     <label>Năm xuất bản</label>
                     <input type='number'
                         id='year'
+                        value={year}
                         onChange={(e) => setYear(e.target.value)}>
                     </input>
                 </div>
@@ -73,16 +90,21 @@ function Form() {
                         <th>Tên sách</th>
                         <th>Tên tác giả</th>
                         <th>Năm xuất bản</th>
+                        <th>Chức năng</th>
                     </tr>
                 </thead>
 
                 <tbody className='FormBody'>
                     {book.map((item, index) => (
                         <tr key={index}>
-                            <th>{index+1}</th>
+                            <th>{index + 1}</th>
                             <th>{item.name}</th>
                             <th>{item.auther}</th>
                             <th>{item.year}</th>
+                            <th>
+                                <button onClick={() => edit(item.id)}>Sửa</button>
+                                <button onClick={() => del(item.id)}>Xóa</button>
+                            </th>
                         </tr>
                     ))}
                 </tbody>
