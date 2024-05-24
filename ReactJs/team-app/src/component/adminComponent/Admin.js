@@ -2,12 +2,11 @@
 
 import { useState } from 'react';
 import './Admin.css'
-import { Link } from 'react-router-dom';
 
 function Admin() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    
+
     // btn login
     const login = (username, password) => {
         if (username === "" || password === "") {
@@ -15,8 +14,8 @@ function Admin() {
             userErrorInput.innerText = "Vui lòng nhập Username và Password !"
         } else {
             if (username === 'admin' && password === 'admin123') {
-                console.log("login success !");
-                <Link to={"/addProducts"}></Link>
+                alert("Đăng nhập thành công !");
+                window.location.href = "/addproducts";
             } else {
                 var userError = document.getElementById('userError')
                 userError.innerText = "Sai tài khoản hoặc mật khẩu !";
@@ -34,12 +33,12 @@ function Admin() {
     return (
         <>
             <div className='admin-container'>
-                <p className='admin-title'>NHA NAM LOGIN ADMIN</p>
+                <p className='admin-title'>NHA NAM ADMIN LOGIN</p>
                 <div style={{ width: "300px", margin: "0 auto" }}>
                     <div className='admin-containerForm'>
                         <label className='admin-label'>Username</label>
                         <input type='text'
-                        style={{width: "200px"}}
+                            style={{ width: "200px" }}
                             id='username'
                             onKeyDown={() => setUsername(removeError(username, password))}
                             onChange={(e) => setUsername(e.target.value)}>
@@ -48,7 +47,7 @@ function Admin() {
                     <div className='admin-containerForm'>
                         <label className='admin-label'>Password</label>
                         <input type='text'
-                        style={{width: "200px"}}
+                            style={{ width: "200px" }}
                             id='password'
                             onKeyDown={() => setPassword(removeError(username, password))}
                             onChange={(e) => setPassword(e.target.value)}>
@@ -60,10 +59,10 @@ function Admin() {
                     textAlign: "center",
                     marginTop: "15px"
                 }}>
-                        <button className='admin-btn'
-                            onClick={() => login(username, password)}>
-                                Login
-                        </button>
+                    <button className='admin-btn'
+                        onClick={() => login(username, password)}>
+                        Login
+                    </button>
                 </div>
                 <div style={{
                     width: "100%",
