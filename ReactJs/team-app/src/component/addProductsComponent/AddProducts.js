@@ -5,6 +5,7 @@ import './AddProducts.css';
 import { db } from './AddProductsService';
 
 function AddProducts() {
+
     const [bookName, setBookName] = useState("")
     const [autherName, setAuther] = useState("")
     const [pubYear, setPubYear] = useState()
@@ -31,19 +32,20 @@ function AddProducts() {
         }
     }
 
-    const fileupload = document.getElementById("file-upload");
-    fileupload.addEventListener("change", (event) => {
-        const { files } = event.target;
-        for (const file of files) {
-            const { name, type, size, lastModified } = file;
-            console.log(file)
-        }
-    });
+    // const fileupload = document.getElementById("file-upload");
+    // fileupload.addEventListener("change", (event) => {
+    //     const { files } = event.target;
+    //     for (const file of files) {
+    //         const { name, type, size, lastModified } = file;
+    //         console.log(file)
+    //     }
+    // });
 
 
     return (
 
         <>
+        <h1 className='well-come'>CHÀO MỪNG ADMIN</h1>
             <div className='addProducts-container'>
                 <p className='addProducts-titleForm'>NHẬP THÔNG TIN SÁCH</p>
                 <div className='addProducts-form'>

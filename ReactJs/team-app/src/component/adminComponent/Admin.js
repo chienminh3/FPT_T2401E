@@ -14,7 +14,6 @@ function Admin() {
             userErrorInput.innerText = "Vui lòng nhập Username và Password !"
         } else {
             if (username === 'admin' && password === 'admin123') {
-                alert("Đăng nhập thành công !");
                 window.location.href = "/addproducts";
             } else {
                 var userError = document.getElementById('userError')
@@ -22,7 +21,7 @@ function Admin() {
             }
         }
     }
-
+    
     const removeError = (usernameInput, passwordInput) => {
         if (usernameInput === "" || passwordInput === "") {
             var removeUserError = document.getElementById('userError')

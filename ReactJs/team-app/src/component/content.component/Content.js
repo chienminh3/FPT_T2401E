@@ -3,8 +3,13 @@ import './Reponsive.css'
 import './Content.css'
 import './Responsive_content.css'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 function Content() {
+
+  const [studentList, setStudentList] = useState[""];
+
+
   const products = [{
     id: 1,
     src: "https://bizweb.dktcdn.net/thumb/large/100/363/455/products/khong-co-tuyet-vong-tren-instagram-01-e1710474202548.jpg?v=1710474211207",
