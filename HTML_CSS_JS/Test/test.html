@@ -1,79 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../Test/test.css">
-    <script src="../Test/test.js">
-
-    </script>
-    <title>Test</title>
+    <title>Biểu đồ ngang với Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="grid">
-        <!-- Header -->
-        <div class="header">
-            <h1>Create Account</h1>
-            <p>Get started with your free account</p>
-        </div>
-        
-        <!-- Nav -->
-        <div class="nav">
-            <div>
-                <a href="" class="item-twitter">
-                    <i class="fa fa-twitter"></i>
-                    <p>Login via Twitter</p>
-                </a>
-                <a href="" class="item-facebook">
-                    <i class="fa fa-facebook"></i>
-                    <p>Login via Facebook</p>
-                </a>
-            </div>
-        </div>
-
-        <hr style="width: 300px;">
-
-        <div class="form">
-            <div>
-                <form action="">
-                    <i class="fa fa-user"></i>
-                    <input placeholder="enter name" id="nameID" type="text" onkeydown="removeError()">
-                </form>
-                <form action="">
-                    <i class="fa fa-envelope"></i>
-                    <input placeholder="enter address" id="addressID" type="text" onkeydown="removeError()">
-                </form>
-                <form action="">
-                    <i class="fa fa-phone"></i>
-                    <select style="border: none; height: 40px; width: 50px;" name="" id="">
-                        <option value="">+84</option>
-                        <input placeholder="enter numberphone" id="numberPhoneID" style="width: 240px;" type="text" onkeydown="removeError(); checkNumIsInteger();">
-                    </select>
-                </form>
-                <form action="">
-                    <i  class="fa fa-building"></i>
-                    <select style="border: none; height: 40px; width: 270px;" name="" id="">
-                        <option value="">helo</option>
-                    </select>
-                </form>
-                <form action="">
-                    <i class="fa fa-unlock-alt"></i>
-                    <input placeholder="enter password" id="passwordID" type="text" oninput="convertToStars(this)" onkeydown="removeError()">
-                </form>
-                <form action="">
-                    <i class="fa fa-unlock-alt"></i>
-                    <input placeholder="acceptpassword" id="acceptpasswordID" type="text" oninput="convertToStars(this)" onkeydown="removeError()">
-                </form>
-            </div>
-        </div>
-        <form  style="margin: top 10px; ;">
-            <a href="https://www.youtube.com/watch?v=zoEtcR5EW08&list=RDzoEtcR5EW08&start_radio=1">
-                <button class="btn" onclick="return validationForm()">Create Account</button>
-            </a>
-        </form>
-        <p id="enterError" style="color: red;"></p>
-        <p>Have an account?<a style="color: rgb(0, 64, 255); text-decoration: none;" href="">Login</a></p>
-    </div>
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Đây là dòng làm cho biểu đồ là biểu đồ ngang
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
